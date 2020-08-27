@@ -32,6 +32,7 @@ const supported_algo_t supp_dh_group[] = {
 	{"dh1", OAKLEY_GRP_1, IKE_GROUP_MODP_768,  IKE_GROUP_MODP_768,  0},
 	{"dh2", OAKLEY_GRP_2, IKE_GROUP_MODP_1024, IKE_GROUP_MODP_1024, 0},
 	{"dh5", OAKLEY_GRP_5, IKE_GROUP_MODP_1536, IKE_GROUP_MODP_1536, 0},
+	{"dh14", OAKLEY_GRP_14, IKE_GROUP_MODP_2048, IKE_GROUP_MODP_2048, 0},
 	/*{ "dh7", OAKLEY_GRP_7, IKE_GROUP_EC2N_163K, IKE_GROUP_EC2N_163K, 0 } note: code missing */
 	{NULL, 0, 0, 0, 0}
 };
@@ -39,6 +40,9 @@ const supported_algo_t supp_dh_group[] = {
 const supported_algo_t supp_hash[] = {
 	{"md5", GCRY_MD_MD5, IKE_HASH_MD5, IPSEC_AUTH_HMAC_MD5, 0},
 	{"sha1", GCRY_MD_SHA1, IKE_HASH_SHA, IPSEC_AUTH_HMAC_SHA, 0},
+	{"sha2-256", GCRY_MD_SHA256, IKE_HASH_SHA2_256, IPSEC_AUTH_HMAC_SHA2_256, 0},
+	{"sha2-384", GCRY_MD_SHA384, IKE_HASH_SHA2_384, IPSEC_AUTH_HMAC_SHA2_384, 0},
+	{"sha2-512", GCRY_MD_SHA512, IKE_HASH_SHA2_512, IPSEC_AUTH_HMAC_SHA2_512, 0},
 	{NULL, 0, 0, 0, 0}
 };
 
